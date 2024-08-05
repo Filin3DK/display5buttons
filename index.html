@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+<title>Button Display</title>
+<style>
+
+
+	body {
+		padding-left: 400px;
+	}
+
+   .box {
+       display: flex;
+       flex-direction: column;
+       width: 400px;
+       height: auto;
+       border: 2px solid red;
+
+
+
+   }
+
+
+	
+	button {
+		width: 150px;
+      padding: 10px 20px;
+      margin-left: 125px;
+      margin-bottom: 30px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+button:hover {
+      background-color: #2980b9;
+}
+
+#output {
+      display: flex;
+      width: 350px;
+      height: 150px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      margin-left: 25px;
+  /*background: yellow;*/
+      color: #401E73;
+      font-size: 18px;
+      font-weight: bold;
+      outline: 2px solid red;	
+  
+ 
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<div id="output"></div>
+
+      <button id="button1">Button 1</button>
+      <button id="button2">Button 2</button>
+      <button id="button3">Button 3</button>
+      <button id="button4">Button 4</button>
+      <button id="button5">Clear screen</button>
+
+
+
+<script>
+
+	
+$(document).ready(function() {
+
+    alert("JQUERY ЗАРАБОТАЛ!");
+
+    $("#button1").click(function() {
+      $("#output").text("Text for Button 1");
+    });
+    
+    $("#button2").click(function() {
+      $("#output").text("Text for Button 2");
+    });
+    
+    $("#button3").click(function() {
+      $("#output").text("Text for Button 3");
+    });
+    
+    $("#button4").click(function() {
+      $("#output").text("Text for Button 4");
+    });
+
+    $("#button5").click(function() {
+      $("#output").text(""); // Set the text to an empty string to clear it
+  });
+    
+    
+});
+
+</script>
+
+</div>
+</body>
+</html>
